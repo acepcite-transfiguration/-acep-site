@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ACEP Cité de la Transfiguration</title>
+<style>
+body{ margin:0; font-family:Arial, sans-serif; background:linear-gradient(to bottom,#0d47a1,#1976d2); min-height:100vh; color:white; }
+.header{ text-align:center; padding:30px 20px 20px 20px; }
+.logo{ width:120px; height:120px; border-radius:50%; background:white; padding:5px; box-shadow:0 4px 15px rgba(0,0,0,0.3); margin:0 auto 15px auto; display:block; object-fit: cover; }
+.header h1{ font-size:26px; margin:0 0 5px 0; }
+.devise{ font-size:14px; font-weight:bold; color:#ffd700; margin:5px 0 10px 0; letter-spacing:1px; }
+.header p{ margin:6px 0; font-size:15px; }
+.menu{ display:flex; flex-wrap:wrap; justify-content:center; gap:12px; padding:20px; max-width:400px; margin:0 auto; }
+.menu button{ background:white; color:#0d47a1; border:none; padding:12px 18px; border-radius:25px; font-weight:bold; font-size:14px; box-shadow:0 2px 8px rgba(0,0,0,0.2); cursor:pointer; width: 45%; }
+.menu button:active{background:#e3f2fd;}
+.section{ background:white; margin:0 20px 20px 20px; padding:25px; border-radius:20px; box-shadow:0 4px 15px rgba(0,0,0,0.15); color:#333; display:none; }
+.section.active{display:block;}
+.section h2{ color:#0d47a1; margin-top:0; }
+.section p{ font-size:16px; line-height:1.7; }
+footer{ background:white; margin:20px; padding:20px; border-radius:20px; color:#0d47a1; text-align:center; }
+</style>
+<script>
+function montrer(id){
+  document.querySelectorAll('.section').forEach(e => e.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  document.getElementById(id).scrollIntoView({behavior:"smooth"});
+}
+</script>
+</head>
+<body>
+
+<div class="header">
+  <img src="logo.png" alt="Logo ACEP" class="logo" onerror="this.style.display='none'">
+  <h1>ACEP Cité de la Transfiguration</h1>
+  <p class="devise">DEVISE: RELATION, PRIERE, SERVICE</p>
+  <p>Assemblée dirigée par le Berger Lambert Disashi</p>
+  <p>📍 Kinshasa - RDC</p>
+</div>
+
+<div class="menu">
+  <button onclick="montrer('accueil')">🏠 Accueil</button>
+  <button onclick="montrer('apropos')">📖 À propos</button>
+  <button onclick="montrer('programmes')">📅 Programmes</button>
+  <button onclick="montrer('predications')">🎤 Prédications</button>
+  <button onclick="montrer('temoignages')">🙏 Témoignages</button>
+  <button onclick="montrer('verset')">📖 Verset</button>
+  <button onclick="montrer('galerie')">📸🎥 Photos & Vidéos</button>
+  <button onclick="montrer('contact')">📞 Contact</button>
+</div>
+
+<!-- ===== MESSAGE D'ACCUEIL = FORCÉ À S'AFFICHER AU DÉPART ===== -->
+<div id="accueil" class="section active">
+  <h2>Bienvenue</h2>
+  <p><b>Frères et sœurs shalom.</b></p>
+  <p>Quel que soit votre âge, votre sexe, votre rang social, Jésus Christ vous aime et vous appelle.</p>
+  <p>Il veut vous sauver et a un plan merveilleux pour votre destinée.</p>
+  <p>L’Assemblée Chrétienne d’Évangélisation et Prière "ACEP" vous accueille.</p>
+</div>
+
+<div id="apropos" class="section">
+  <h2>À propos de nous</h2>
+  <p><b>ACEP cité de la Transfiguration</b> est une Assemblée centrée sur 3 piliers : <b>RELATION, PRIERE, SERVICE</b>.</p>
+  <p>Nous sommes dirigés par le Berger Lambert Disashi.</p>
+</div>
+
+<div id="programmes" class="section">
+  <h2>Nos Programmes</h2>
+  <p><b>Lundi :</b> Prière d'intercession de 17h30 à 19h00</p>
+  <p><b>Mardi :</b> Réunion des jeunes</p>
+  <p><b>Mercredi :</b> Prière d’affermissement de 17h30 à 19h00</p>
+  <p><b>Jeudi :</b> Prière de maman</p>
+  <p><b>Vendredi :</b> Culte de restauration de 17h30 à 19h00</p>
+  <p><b>Dimanche :</b> Culte d'enseignement de 07h00 à 10h00</p>
+</div>
+
+<div id="predications" class="section"><h2>Prédications</h2><p>Colle ici tes prédications mon Berger.</p></div>
+<div id="temoignages" class="section"><h2>Témoignages</h2><p>"Dieu a transformé ma vie à l’ACEP. Je suis venu brisé et maintenant je suis restauré." - Fr. Patrick-diomi</p></div>
+<div id="verset" class="section"><h2>Verset du jour</h2><p><i>Car Dieu a tant aimé le monde qu'il a donné son Fils unique...</i><br><b>Jean 3:16</b></p></div>
+<div id="galerie" class="section">
+  <h2>📸🎥 Photos & Vidéos</h2>
+  <p style="text-align:center; color:#64748b;">Ajoute tes photos dans `photos/` et vidéos dans `videos/`</p>
+</div>
+<div id="contact" class="section">
+  <h2>Contact</h2>
+  <p><b>Adresse :</b> N°93 av MAHEGE C/ KINSHASA <br> entre du marrain et du marché</p>
+  <p><b>Tél :</b> +243 812097022, 990041104</p>
+  <p><b>Email :</b> ldisashibiomed26@gmail.com </p>
+  <p><b>Facebook :</b> pasteur lambert naziréen disashi</p>
+</div>
+
+<footer>
+  <h3>ACEP Cité de la Transfiguration</h3>
+  <p>© 2026</p>
+</footer>
+
+</body>
+</html>
